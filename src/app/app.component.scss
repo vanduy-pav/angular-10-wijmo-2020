@@ -1,0 +1,29 @@
+p {
+    font-family: Lato;
+  }
+
+
+  wj-flex-grid {
+    height: 100%;
+    border: 1px solid black;
+    display: block;
+  }
+  .lv2, .lv3 {
+    height: 100%;
+  }
+
+  .wrap {
+    height: 250px;
+    background-color: red;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .fixed-height-s {
+    height: 200px;
+    position: relative;
+  }
+
+  .spread-area {
+    height: 100%;
+  }
