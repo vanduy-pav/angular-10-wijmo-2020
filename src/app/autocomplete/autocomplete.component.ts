@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CollectionView } from '@grapecity/wijmo';
+import { WjAutoComplete } from '@grapecity/wijmo.angular2.input';
 import { Observable } from 'rxjs';
 
 export interface IData {
@@ -55,13 +56,18 @@ export class AutocompleteComponent implements OnInit {
     }
   }
 
-  constructor(private _cdr: ChangeDetectorRef) {
+  @ViewChild(WjAutoComplete) autoComplete: WjAutoComplete;
+  constructor() {
   }
 
   ngOnInit() {
     // console.log("selected value", this.selectedValue);
     console.log("selectedItem---------", this.selectedItem);
-    // this._cdr.detectChanges();
+
+    setTimeout(() => {
+      this.autoComplete.selectedValue = this.selectedValue;
+      console.log('refreshed: ', this.selectedValue);
+    });
   }
 
 }

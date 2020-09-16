@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DataSvcService, autocompleteData } from "./data-svc.service";
 
 import * as wjcCore from '@grapecity/wijmo';
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit  {
   autocompleteSource: wjcCore.CollectionView;
   data$: BehaviorSubject<IData>;
 
-  constructor(private dataSvc:DataSvcService){
+  constructor(private dataSvc:DataSvcService, private _cdr: ChangeDetectorRef){
     this.data=dataSvc.getData(50);
     this.autocompleteSource = new wjcCore.CollectionView(autocompleteData);
   }
@@ -34,6 +34,11 @@ export class AppComponent implements OnInit  {
       itemsSource: autocompleteData,
       selectedValue: 2
     });
+
+    setTimeout(() => {
+      this._cdr.detectChanges();
+      console.log('changed')
+    }, 4000);
   }
 
   doPrint(){
