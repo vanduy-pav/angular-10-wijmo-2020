@@ -1,0 +1,71 @@
+<app-spread [items]="data">
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
+                       [isReadOnly]="true"
+                       [align]="'center'"
+                       [width]="100"
+                       [allowResizing]="true"
+                       [wordWrap]="false"
+                       [allowSorting]="false"
+                       [header] ="'Country'">
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+      <app-autocomplete [selectedValue]="cell.item.select"
+                        [dataSource$]="cell.item.selectData$">
+      </app-autocomplete>
+    </ng-template>
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
+</app-spread>
+
+<app-spread [items]="data">
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'country'"
+                       [isReadOnly]="true"
+                       [align]="'center'"
+                       [width]="100"
+                       [allowDragging]="false"
+                       [allowResizing]="true"
+                       [wordWrap]="false"
+                       [allowSorting]="false"
+                       [header] ="'Country'">
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+      <app-autocomplete [selectedValue]="cell.item.select"
+                        [dataSource$]="cell.item.selectData$">
+      </app-autocomplete>
+    </ng-template>
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
+</app-spread>
+
+<p>test-spread works!</p>
+<app-spread [items]="data">
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
+                       [isReadOnly]="true"
+                       [align]="'center'"
+                       [width]="100"
+                       [allowResizing]="true"
+                       [wordWrap]="false"
+                       [allowSorting]="false"
+                       [header] ="'Country'">
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+      <app-autocomplete [selectedValue]="cell.item.select"
+                        [dataSource$]="cell.item.selectData$">
+      </app-autocomplete>
+    </ng-template>
+  </wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
+</app-spread>
+<hr>

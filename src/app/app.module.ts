@@ -1,21 +1,34 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { WjCoreModule } from '@grapecity/wijmo.angular2.core';
 
 import { WjGridModule } from '@grapecity/wijmo.angular2.grid';
+import { WjGridDetailModule } from '@grapecity/wijmo.angular2.grid.detail';
 import { WjGridFilterModule } from '@grapecity/wijmo.angular2.grid.filter';
 import { WjInputModule } from '@grapecity/wijmo.angular2.input';
-import { WjGridDetailModule } from "@grapecity/wijmo.angular2.grid.detail";
-import { DataSvcService } from './data-svc.service';
-import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { SpreadModule } from 'src/app/shares/spread/spread.module';
+import { TestSpreadComponent } from 'src/app/test-spread/test-spread.component';
 
+import { AppComponent } from './app.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { ManySpreadViewComponent } from './many-spread-view/many-spread-view.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, WjGridModule, WjGridFilterModule, WjInputModule, WjGridDetailModule ],
-  declarations: [ AppComponent, AutocompleteComponent ],
-  bootstrap:    [ AppComponent ],
-  providers: [DataSvcService]
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    WjGridModule,
+    WjGridFilterModule,
+    WjCoreModule,
+    WjInputModule,
+    WjGridDetailModule,
+    SpreadModule
+  ],
+  declarations: [AppComponent, AutocompleteComponent, TestSpreadComponent, ManySpreadViewComponent],
+  bootstrap: [AppComponent],
+  providers: []
 })
-export class AppModule { }
+export class AppModule {}

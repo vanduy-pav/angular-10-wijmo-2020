@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CollectionView } from '@grapecity/wijmo';
 import { WjAutoComplete } from '@grapecity/wijmo.angular2.input';
 import { Observable } from 'rxjs';
+import '@grapecity/wijmo.touch'; // support drag/drop on touch devices
 
 export interface IData {
   selectedValue: string | number;
