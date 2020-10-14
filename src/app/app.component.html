@@ -13,19 +13,994 @@
       <div class="lv2">
         <div class="lv3">
           <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
-            <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'select'">
+            <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
+                                  [isReadOnly]="true"
+                                  [align]="'center'"
+                                  [width]="100"
+                                  [allowResizing]="true"
+                                  [wordWrap]="false"
+                                  [allowSorting]="false"
+                                  [header] ="'Country'">
+            </wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
               <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
                  <app-autocomplete [selectedValue]="cell.item.select"
                     [dataSource$]="cell.item.selectData$">
                  </app-autocomplete>
               </ng-template>
             </wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
           </wj-flex-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h1 id="hId">Wijmo print document</h1>
+<button id="someID" (click)="doPrint()">Print</button>
+<div class="lv1-1">
+  <div class="lv1-2">
+    <section class="section">
+      <div class="row">
+        <div class="col-xs-17 col-xs-offset-7">
+          <div class="wrap">
+            <div class="lv2">
+              <div class="lv3">
+                <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                  <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                </wj-flex-grid>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-17 col-xs-offset-7">
+          <div class="wrap">
+            <div class="lv2">
+              <div class="lv3">
+                <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                </wj-flex-grid>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-17 col-xs-offset-7">
+          <div class="wrap">
+            <div class="lv2">
+              <div class="lv3">
+                <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                </wj-flex-grid>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div _ngcontent-mud-c32="" id="usrInfoContainer" _nghost-mud-c21="" ng-reflect-j-text-property="[object Object]" class="ng-star-inserted">
+  <div _ngcontent-mud-c21="" class="container">
+
+    <div _ngcontent-mud-c21="" class="container-header ng-star-inserted">
+      <h2 _ngcontent-mud-c21=""><i _ngcontent-mud-c21="" class="fa fa-list"></i>name title</h2>
+      <aside _ngcontent-mud-c21=""></aside>
+    </div>
+    <div _ngcontent-mud-c21="" class="container-footer-range" ng-reflect-klass="container-footer-range" ng-reflect-ng-class="">
+      <div _ngcontent-mud-c21="" class="container-content">
+        <div _ngcontent-mud-c32="">
+          <form _ngcontent-mud-c32="" novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-valid">
+            <div _ngcontent-mud-c32="" id="usrInfoSection" _nghost-mud-c22="" ng-reflect-j-text-property="[object Object]">
+              <section _ngcontent-mud-c22="" class="section">
+
+                <h3 _ngcontent-mud-c22="" class="title ng-star-inserted">user info</h3>
+
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-4 col-xs-offset-7">
+                    <div _ngcontent-mud-c32="" id="usrId" _nghost-mud-c33="" ng-reflect-id="usrId" ng-reflect-j-text-property="[object Object]" ng-reflect-value="12333111" data-id="usrId">
+                      <div _ngcontent-mud-c33="" _nghost-mud-c12="" class="ng-tns-c12-5" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="ユーザーID" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-5">ユーザーID</label>
+                            <span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c33="" class="textarea-content row" ng-reflect-klass="textarea-content row" ng-reflect-ng-class="[object Object]">
+                              <div _ngcontent-mud-c33="" ng-reflect-klass="" ng-reflect-ng-class="[object Object]"><textarea _ngcontent-mud-c33="" readonly="" rows="1" class="textarea" ng-reflect-ng-class="[object Object]" ng-reflect-ng-style="[object Object]" placeholder="" style="height: 24px;">      </textarea></div>
+                            </div>
+                          </div>
+
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-5 ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-9 col-xs-offset-7">
+                    <div _ngcontent-mud-c32="" id="usrNm" _nghost-mud-c10="" ng-reflect-id="usrNm" ng-reflect-errors="" ng-reflect-is-required="true" ng-reflect-j-text-property="[object Object]" ng-reflect-value="石黒" ng-reflect-name="usrNm" data-id="usrNm" class="ng-untouched ng-pristine ng-valid">
+                      <div _ngcontent-mud-c10="" _nghost-mud-c12="" class="ng-tns-c12-6" ng-reflect-ng-class="[object Object]" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="true" ng-reflect-is-enabled="true" ng-reflect-title="ユーザー名" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-6">ユーザー名</label><!--bindings={
+                              "ng-reflect-ng-if": "true"
+                              }--><span _ngcontent-mud-c12="" class="icon-required ng-tns-c12-6 ng-star-inserted">必須</span><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c10="" class="row">
+                              <div _ngcontent-mud-c10="" class="">
+                                <div _ngcontent-mud-c10="" _nghost-mud-c14="" ng-reflect-ng-class="[object Object]" ng-reflect-is-only-hankaku="false" ng-reflect-is-password="false" ng-reflect-max-length="-1" ng-reflect-is-disabled="false" ng-reflect-is-read-only="false" ng-reflect-placeholder="例）山田　太郎"><input _ngcontent-mud-c14="" placeholder="例）山田　太郎" type="text"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-6 ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-17 col-xs-offset-7">
+                    <div _ngcontent-mud-c32="" id="usrNmKana" _nghost-mud-c10="" ng-reflect-id="usrNmKana" ng-reflect-errors="" ng-reflect-j-text-property="[object Object]" ng-reflect-value="かな" ng-reflect-name="usrNmKana" data-id="usrNmKana" class="ng-untouched ng-pristine ng-valid">
+                      <div _ngcontent-mud-c10="" _nghost-mud-c12="" class="ng-tns-c12-7" ng-reflect-ng-class="[object Object]" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="ユーザー名かな" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-7">ユーザー名かな</label>
+                            <span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c10="" class="row">
+                              <div _ngcontent-mud-c10="" class="">
+                                <div _ngcontent-mud-c10="" _nghost-mud-c14="" ng-reflect-ng-class="[object Object]" ng-reflect-is-only-hankaku="false" ng-reflect-is-password="false" ng-reflect-max-length="-1" ng-reflect-is-disabled="false" ng-reflect-is-read-only="false" ng-reflect-placeholder="例）やまだ　たろう"><input _ngcontent-mud-c14="" placeholder="例）やまだ　たろう" type="text"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-7 ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-4 col-xs-offset-7">
+                    <div _ngcontent-mud-c32="" id="role" _nghost-mud-c33="" ng-reflect-id="role" ng-reflect-j-text-property="[object Object]" ng-reflect-value="理理理理" data-id="role">
+                      <div _ngcontent-mud-c33="" _nghost-mud-c12="" class="ng-tns-c12-8" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="ユ限限限限限限" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-8">ユーユーユーユー</label><!--bindings={
+                              "ng-reflect-ng-if": "false"
+                              }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-if": "true"
+                            }--><!----><!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }--><!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }--><!---->
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c33="" class="textarea-content row" ng-reflect-klass="textarea-content row" ng-reflect-ng-class="[object Object]">
+                              <div _ngcontent-mud-c33="" ng-reflect-klass="" ng-reflect-ng-class="[object Object]"><textarea _ngcontent-mud-c33="" readonly="" rows="1" class="textarea" ng-reflect-ng-class="[object Object]" ng-reflect-ng-style="[object Object]" placeholder="" style="height: 24px;">      </textarea></div>
+                            </div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-8 ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-9 col-xs-offset-7">
+                    <div _ngcontent-mud-c32="" id="selfAdminCdUsr" _nghost-mud-c33="" ng-reflect-id="selfAdminCdUsr" ng-reflect-j-text-property="[object Object]" ng-reflect-value="" data-id="selfAdminCdUsr">
+                      <div _ngcontent-mud-c33="" _nghost-mud-c12="" class="ng-tns-c12-9" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="コードコードコード" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-9">コードコードコードコード</label><!--bindings={
+                              "ng-reflect-ng-if": "false"
+                              }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-if": "true"
+                            }--><!----><!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }--><!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }--><!---->
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c33="" class="textarea-content row" ng-reflect-klass="textarea-content row" ng-reflect-ng-class="[object Object]">
+                              <div _ngcontent-mud-c33="" ng-reflect-klass="" ng-reflect-ng-class="[object Object]"><textarea _ngcontent-mud-c33="" readonly="" rows="1" class="textarea" ng-reflect-ng-class="[object Object]" ng-reflect-ng-style="[object Object]" placeholder="">      </textarea></div>
+                            </div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-9 ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-17">
+                    <div _ngcontent-mud-c32="" id="gyomuActUserList" _nghost-mud-c34="" ng-reflect-id="gyomuActUserList" ng-reflect-j-text-property="[object Object]" ng-reflect-screen-id="cg62212" ng-reflect-record-count-display-format="2" data-id="gyomuActUserList" ng-reflect-items-source="[object Object]">
+                      <div _ngcontent-mud-c34="" _nghost-mud-c37="" ng-reflect-is-required="false" ng-reflect-is-disabled="false" ng-reflect-record-count-display-format="2" ng-reflect-record-count-plain-text="" ng-reflect-select-all-button-visibility="false" ng-reflect-height-css-class-list="" data-id="" ng-reflect-title="" ng-reflect-tooltip="" ng-reflect-infos="コードコードコードコードコードコードコード">
+                        <div _ngcontent-mud-c37="" _nghost-mud-c12="" class="ng-tns-c12-10" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="" ng-reflect-tooltip="">
+                          <div _ngcontent-mud-c12="" class="form-group">
+                            <div _ngcontent-mud-c12="" class="form-label hidden">
+                              <label _ngcontent-mud-c12="" class="ng-tns-c12-10"></label><!--bindings={
+                                "ng-reflect-ng-if": "false"
+                                }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                            </div>
+                            <!--bindings={
+                              "ng-reflect-ng-if": "true"
+                              }--><!----><!--bindings={
+                              "ng-reflect-ng-for-of": ""
+                              }--><!--bindings={
+                              "ng-reflect-ng-for-of": ""
+                              }--><!---->
+                            <div _ngcontent-mud-c12="" class="content">
+                              <div _ngcontent-mud-c37="" class="amount">
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全選択
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全解除
+                                  </button>
+                                </div>
+                                <span _ngcontent-mud-c37="" class="hidden"><span _ngcontent-mud-c37="" class=""> 1～26 / </span> 全0件 </span><span _ngcontent-mud-c37=""> 全26件 </span><span _ngcontent-mud-c37="" class="hidden">  </span><span _ngcontent-mud-c37="" class="hidden"> 26件 </span>
+                              </div>
+                              <div _ngcontent-mud-c37="" class="fixed-height-s">
+                                <!--bindings={
+                                  "ng-reflect-ng-if": "true"
+                                  }--><!---->
+                                <div _ngcontent-mud-c37="" class="empty-message hidden ng-star-inserted">
+                                  <div _ngcontent-mud-c37="" _nghost-mud-c20="">
+                                    <!--bindings={
+                                      "ng-reflect-ng-if": null
+                                      }-->
+                                  </div>
+                                </div>
+                                <div _ngcontent-mud-c37="" appactivitytracking="" class="spread-area">
+                                  <wj-flex-grid _ngcontent-mud-c34="" _nghost-mud-c38="" class="wj-control wj-content wj-flexgrid wj-state-focus wj-state-focused" tabindex="-1" wj-directive-id="2" ng-reflect-id="gyomuActUserList" ng-reflect-screen-id="cg62212" ng-reflect-is-disabled="false" ng-reflect-is-single-selection="true" style="">
+                                    <div style="position:relative;width:100%;height:100%;overflow:hidden;max-width:inherit;max-height:inherit">
+                                      <div wj-part="root" style="position:absolute;left:0;top:0;width:100%;height:100%;overflow:auto;max-width:inherit;max-height:inherit;-webkit-overflow-scrolling:touch;">
+                                        <div wj-part="cells" class="wj-cells" style="position: absolute; left: 38px; top: 32px; width: 954px; height: 650px;" role="grid">
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell" tabindex="-1" role="columnheader" aria-sort="none" aria-readonly="true" aria-required="false" style="position: fixed; left: 0px; top: -32000px; width: 82px; height: 0.1px; overflow: hidden; opacity: 0; pointer-events: none;">コードコードコード</div>
+                                            <div class="wj-cell" tabindex="-1" role="columnheader" aria-sort="none" aria-readonly="true" aria-required="false" style="position: fixed; left: 82px; top: -32000px; width: 779px; height: 0.1px; overflow: hidden; opacity: 0; pointer-events: none;">コードコードコードコード</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 475px; width: 82px; height: 25px;">コードコードコードコード</div>
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 475px; width: 779px; height: 25px;">テスト沖コードコードコードコード</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 500px; width: 82px; height: 25px;">コードコードコードコード</div>
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 500px; width: 779px; height: 25px;">グ1本1支1部1統1排1</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 525px; width: 82px; height: 25px;">コードコード</div>
+                                            <div class="wj-cell wj-alt wj-state-selected wj-state-active wj-align-left" tabindex="-1" role="gridcell" aria-selected="true" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 525px; width: 779px; height: 25px;">コードコードコードコード</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 550px; width: 82px; height: 25px;">コードコードコード</div>
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 550px; width: 779px; height: 25px;">グ1本2支1排1</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 575px; width: 82px; height: 25px;">本店</div>
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 575px; width: 779px; height: 25px;">グ1収運1</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 600px; width: 82px; height: 25px;">本店</div>
+                                            <div class="wj-cell wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 600px; width: 779px; height: 25px;">グ1処分1</div>
+                                          </div>
+                                          <div class="wj-row" role="row">
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 0px; top: 625px; width: 82px; height: 25px;">統括事業場</div>
+                                            <div class="wj-cell wj-alt wj-align-left" tabindex="-1" role="gridcell" aria-selected="false" aria-readonly="true" aria-required="false" title="" style="left: 82px; top: 625px; width: 779px; height: 25px;">グ1本1支1部1統1</div>
+                                          </div>
+                                        </div>
+                                        <div wj-part="marquee" class="wj-marquee" style="display:none" aria-hidden="true">
+                                          <div style="width:100%;height:100%"></div>
+                                        </div>
+                                      </div>
+                                      <div wj-part="fcells" aria-hidden="true" class="wj-cells wj-frozen-clone" style="position: absolute; left: 38px; top: 32px; overflow: hidden; pointer-events: none; display: none; width: 624px; height: 151px;"></div>
+                                      <div wj-part="rh" aria-hidden="true" style="position: absolute; overflow: hidden; outline: none; left: 0px; top: 32px; width: 38px; height: 151px;">
+                                        <div wj-part="rhcells" class="wj-rowheaders" style="position: relative; top: -484px;">
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-header-alt wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 475px; width: 38px; height: 25px;">20</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 500px; width: 38px; height: 25px;">21</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-header-alt wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 525px; width: 38px; height: 25px;">22</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 550px; width: 38px; height: 25px;">23</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-header-alt wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 575px; width: 38px; height: 25px;">24</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 600px; width: 38px; height: 25px;">25</div>
+                                          </div>
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-header-alt wj-align-center" tabindex="-1" aria-selected="false" style="left: 0px; top: 625px; width: 38px; height: 25px;">26</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div wj-part="cf" aria-hidden="true" style="position: absolute; overflow: hidden; outline: none; left: 38px; top: 682px; height: 0px; width: 624px;">
+                                        <div wj-part="cfcells" class="wj-colfooters" style="position: relative;"></div>
+                                      </div>
+                                      <div wj-part="ch" aria-hidden="true" style="position: absolute; overflow: hidden; outline: none; left: 38px; top: 0px; height: 32px; width: 624px;">
+                                        <div wj-part="chcells" class="wj-colheaders" style="position: relative; left: 0px;">
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-align-left" tabindex="-1" draggable="true" style="left: 0px; top: 0px; width: 82px; height: 32px; text-align: center;">
+                                              <div class="v-center v-write">組織区分<span class="icon-sort icon-sortable"><i class="fa fa-sort"></i></span></div>
+                                            </div>
+                                            <div class="wj-cell wj-header wj-align-left" tabindex="-1" draggable="true" style="left: 82px; top: 0px; width: 779px; height: 32px; text-align: center;">
+                                              <div class="v-center v-write">業務実施組織<span class="icon-sort icon-sortable"><i class="fa fa-sort"></i></span></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div wj-part="bl" aria-hidden="true" style="position: absolute; overflow: hidden; outline: none; left: 0px; top: 682px; width: 38px; height: 0px;">
+                                        <div wj-part="blcells" class="wj-bottomleft" style="position: relative;"></div>
+                                      </div>
+                                      <div wj-part="tl" aria-hidden="true" style="position: absolute; overflow: hidden; outline: none; left: 0px; top: 0px; width: 38px; height: 32px;">
+                                        <div wj-part="tlcells" class="wj-topleft" style="position: relative;">
+                                          <div class="wj-row">
+                                            <div class="wj-cell wj-header wj-align-center" tabindex="-1" style="left: 0px; top: 0px; width: 38px; height: 32px;"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div wj-part="focus" class="wj-cell" style="position: fixed; left: -32000px;" aria-hidden="true" tabindex="0">0</div>
+                                      <div wj-part="sz" style="position: relative; visibility: hidden; width: 1007px; height: 697px;" aria-hidden="true"></div>
+                                    </div>
+                                    <div _ngcontent-mud-c38=""></div>
+                                  </wj-flex-grid>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-button hidden" _nghost-mud-c7="" ng-reflect-style="btn-primary" ng-reflect-is-disabled="false" ng-reflect-control-id="列設定"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-primary" ng-reflect-ng-class="btn,btn-primary," data-control-id="列設定"><span _ngcontent-mud-c37="" class="fa fa-cog"></span>
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-window hidden">
+                                  <div _ngcontent-mud-c37="" class="column-setting-window-close-button fa fa-times"></div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">列の表示・非表示選択</h3>
+                                    <p _ngcontent-mud-c37="" class="note">チェックチェックチェックチェックチェックチェックチェックチェックチェックチェック</p>
+                                    <div _ngcontent-mud-c37="" class="check-box-wrapper">
+                                      <!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }-->
+                                    </div>
+                                  </div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">表示設定</h3>
+                                    <p _ngcontent-mud-c37=""> 列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅。<br _ngcontent-mud-c37=""> 初期状態に戻す場合は「設定解除」ボタンを押してください。 </p>
+                                    <div _ngcontent-mud-c37="" class="btn-wrapper">
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-is-disabled="false"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="">設定解除
+                                        </button>
+                                      </div>
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-style="btn-primary" ng-reflect-is-disabled="false"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-primary" ng-reflect-ng-class="btn,btn-primary," data-control-id="">設定保存
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--bindings={
+                                "ng-reflect-ng-for-of": "所属組織の追加は［メニュー＞組織管理＞組織管理組織管理組織管理組織管理"
+                                }-->
+                              <p _ngcontent-mud-c37="" class="text-supplementary ng-star-inserted">所属組織の追加は［メニュー＞組織管理＞組織管理組織管理組織管理組織管理］から行ってください。</p>
+                              <div _ngcontent-mud-c37="" _nghost-mud-c40="" ng-reflect-current-page="1" ng-reflect-max-page="0" ng-reflect-is-disabled="false" class="hidden">
+                                <div _ngcontent-mud-c40="" class="pagenation-container" ng-reflect-klass="pagenation-container" ng-reflect-ng-class="[object Object]">
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-backw" ng-reflect-is-disabled="true" ng-reflect-control-id="先頭ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-backward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-b" data-control-id="先頭ページ" disabled="">
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="前ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="前ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-backward disabled" ng-reflect-klass="triangle-icon triangle-backwar" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <span _ngcontent-mud-c40="">1 / 0</span>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="次ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="次ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-forward disabled" ng-reflect-klass="triangle-icon triangle-forward" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-forwa" ng-reflect-is-disabled="true" ng-reflect-control-id="最終ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-forward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-f" data-control-id="最終ページ" disabled="">
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--bindings={}-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-14 col-xs-offset-7 mb-2">
+                    <div _ngcontent-mud-c32="" id="mailAddressItemGroup" _nghost-mud-c27="" ng-reflect-j-text-property="[object Object]">
+                      <div _ngcontent-mud-c27="" class="item-group-container">
+                        <div _ngcontent-mud-c27="" class="title-flex">
+                          <!--bindings={
+                            "ng-reflect-ng-if": "メールアドレス"
+                            }-->
+                          <h4 _ngcontent-mud-c27="" class="ng-star-inserted">メールアドレス</h4>
+                          <!--bindings={
+                            "ng-reflect-ng-if": ""
+                            }-->
+                        </div>
+                        <div _ngcontent-mud-c27="" class="item-group">
+                          <div _ngcontent-mud-c27="" class="item-group-content">
+                            <!--bindings={
+                              "ng-reflect-ng-if": ""
+                              }--><!--bindings={
+                              "ng-reflect-ng-for-of": "[object Object],[object Object",
+                              "ng-reflect-ng-for-track-by": "function (index) {\n        ret"
+                              }-->
+                            <div _ngcontent-mud-c32="" class="row flex-row ng-star-inserted">
+                              <div _ngcontent-mud-c32="" class="col-xs-24">
+                                <div _ngcontent-mud-c32="" _nghost-mud-c10="" ng-reflect-id="mailAddress_0" ng-reflect-errors="" ng-reflect-is-required="true" ng-reflect-j-text-property="[object Object]" ng-reflect-text-class="col-xs-21" ng-reflect-name="mailAddress_0" data-id="mailAddress_0" class="ng-untouched ng-pristine ng-valid">
+                                  <div _ngcontent-mud-c10="" _nghost-mud-c12="" class="ng-tns-c12-17" ng-reflect-ng-class="[object Object]" ng-reflect-title="メールアドレス１" ng-reflect-tooltip="" ng-reflect-infos="メールアドレスは最大5件まで登録可能です。" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="true" ng-reflect-is-enabled="true">
+                                    <div _ngcontent-mud-c12="" class="form-group">
+                                      <div _ngcontent-mud-c12="" class="form-label">
+                                        <label _ngcontent-mud-c12="" class="ng-tns-c12-17">メールアドレス１</label><!--bindings={
+                                          "ng-reflect-ng-if": "true"
+                                          }--><span _ngcontent-mud-c12="" class="icon-required ng-tns-c12-17 ng-star-inserted">必須</span><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                                      </div>
+                                      <!--bindings={
+                                        "ng-reflect-ng-if": "true"
+                                        }--><!----><!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }--><!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }--><!---->
+                                      <div _ngcontent-mud-c12="" class="content">
+                                        <div _ngcontent-mud-c10="" class="row">
+                                          <div _ngcontent-mud-c10="" class="col-xs-21">
+                                            <div _ngcontent-mud-c10="" _nghost-mud-c14="" ng-reflect-ng-class="[object Object]" ng-reflect-is-only-hankaku="false" ng-reflect-is-password="false" ng-reflect-max-length="-1" ng-reflect-placeholder="例）aaa@aaa.com" ng-reflect-is-disabled="false" ng-reflect-is-read-only="false"><input _ngcontent-mud-c14="" placeholder="例）aaa@aaa.com" type="text"></div>
+                                          </div>
+                                          <!--bindings={
+                                            "ng-reflect-ng-if": "false"
+                                            }-->
+                                        </div>
+                                      </div>
+                                      <!--bindings={
+                                        "ng-reflect-ng-for-of": "メールアドレスは最大5件まで登録可能です。"
+                                        }-->
+                                      <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-17 ng-star-inserted">メールアドレスは最大5件まで登録可能です。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div _ngcontent-mud-c32="" class="row flex-row ng-star-inserted">
+                              <div _ngcontent-mud-c32="" class="col-xs-24">
+                                <div _ngcontent-mud-c32="" _nghost-mud-c10="" ng-reflect-id="mailAddress_1" ng-reflect-errors="" ng-reflect-is-required="false" ng-reflect-j-text-property="[object Object]" ng-reflect-text-class="col-xs-21" ng-reflect-name="mailAddress_1" data-id="mailAddress_1" class="ng-untouched ng-pristine ng-valid">
+                                  <div _ngcontent-mud-c10="" _nghost-mud-c12="" class="ng-tns-c12-18" ng-reflect-ng-class="[object Object]" ng-reflect-title="メールアドレス2" ng-reflect-tooltip="" ng-reflect-infos="" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true">
+                                    <div _ngcontent-mud-c12="" class="form-group">
+                                      <div _ngcontent-mud-c12="" class="form-label">
+                                        <label _ngcontent-mud-c12="" class="ng-tns-c12-18">メールアドレス2</label><!--bindings={
+                                          "ng-reflect-ng-if": "false"
+                                          }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                                      </div>
+
+                                      <div _ngcontent-mud-c12="" class="content">
+                                        <div _ngcontent-mud-c10="" class="row">
+                                          <div _ngcontent-mud-c10="" class="col-xs-21">
+                                            <div _ngcontent-mud-c10="" _nghost-mud-c14="" ng-reflect-ng-class="[object Object]" ng-reflect-is-only-hankaku="false" ng-reflect-is-password="false" ng-reflect-max-length="-1" ng-reflect-placeholder="例）aaa@example.com" ng-reflect-is-disabled="false" ng-reflect-is-read-only="false"><input _ngcontent-mud-c14="" placeholder="例）aaa@example.com" type="text"></div>
+                                          </div>
+                                          <!--bindings={
+                                            "ng-reflect-ng-if": "true"
+                                            }-->
+                                          <div _ngcontent-mud-c32="" id="btnMailAddressDelete_i" _nghost-mud-c7="" ng-reflect-style="btn-default icon-minus" ng-reflect-j-text-property="[object Object]" class="pl-2 ng-star-inserted"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default icon-minus" ng-reflect-ng-class="btn,btn-default icon-minus," data-control-id=""> 削除
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }-->
+                                      <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-18 ng-star-inserted"></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div _ngcontent-mud-c32="" class="text-center mb-3">
+                              <div _ngcontent-mud-c32="" id="btnMailAddressAdd" _nghost-mud-c7="" ng-reflect-style="btn-default icon-plus" ng-reflect-size="btn-md" ng-reflect-is-disabled="false" ng-reflect-j-text-property="[object Object]"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default icon-plus btn-md" ng-reflect-ng-class="btn,btn-default icon-plus,btn-" data-control-id=""> アドレス追加
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div _ngcontent-mud-c32="" id="passwordSection" _nghost-mud-c22="" ng-reflect-j-text-property="[object Object]">
+              <section _ngcontent-mud-c22="" class="section">
+
+                <h3 _ngcontent-mud-c22="" class="title ng-star-inserted">パスワード設定</h3>
+
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-7">
+                    <div _ngcontent-mud-c32="" id="passwordUpd" _nghost-mud-c35="" ng-reflect-id="passwordUpd" ng-reflect-j-text-property="[object Object]" ng-reflect-display-member-path="name" ng-reflect-selected-value-path="value" ng-reflect-items-source="[object Object]" ng-reflect-name="passwordUpd" data-id="passwordUpd" class="ng-untouched ng-pristine ng-valid">
+                      <div _ngcontent-mud-c35="" _nghost-mud-c12="" class="ng-tns-c12-11" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label hidden">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-11"></label><!--bindings={
+                              "ng-reflect-ng-if": "false"
+                              }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c35="" class="checkbox-container" ng-reflect-klass="checkbox-container" ng-reflect-ng-class="[object Object]">
+                              <!--bindings={
+                                "ng-reflect-ng-for-of": "[object Object]",
+                                "ng-reflect-ng-for-track-by": "function (index) {\n        ret"
+                                }-->
+                              <div _ngcontent-mud-c35="" _nghost-mud-c39="" ng-reflect-ng-class="[object Object]" ng-reflect-id="passwordUpd0" ng-reflect-value="1" ng-reflect-is-read-only="false" ng-reflect-is-disabled="false" ng-reflect-is-checked="false" ng-reflect-content-text="パスワードを変更する" class="ng-star-inserted"><label _ngcontent-mud-c39="" ng-reflect-ng-class="[object Object]"><input _ngcontent-mud-c39="" type="checkbox" ng-reflect-model="false" id="passwordUpd0" value="1" class="ng-untouched ng-pristine ng-valid"><span _ngcontent-mud-c39="" ng-reflect-ng-class="[object Object]"> パスワードを変更する </span></label></div>
+                            </div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-4">
+                    <div _ngcontent-mud-c32="" id="newPassword" _nghost-mud-c36="" ng-reflect-id="newPassword" ng-reflect-errors="" ng-reflect-is-required="true" ng-reflect-is-disabled="true" ng-reflect-j-text-property="[object Object]" ng-reflect-value="" ng-reflect-name="newPassword" data-id="newPassword" class="ng-untouched ng-pristine ng-valid">
+                      <div _ngcontent-mud-c36="" class="input-password ng-tns-c12-12 not-allowed" _nghost-mud-c12="" ng-reflect-klass="input-password" ng-reflect-ng-class="[object Object]" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="true" ng-reflect-is-enabled="false" ng-reflect-title="新しいパスワード" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-12">新しいパスワード</label><!--bindings={
+                              "ng-reflect-ng-if": "false"
+                              }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-if": "false"
+                            }-->
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c36="" _nghost-mud-c14="" class="disabled" ng-reflect-ng-class="[object Object]" ng-reflect-is-password="true" ng-reflect-value="" ng-reflect-max-length="-1" ng-reflect-placeholder="" ng-reflect-is-disabled="true" ng-reflect-is-read-only="false"><input _ngcontent-mud-c14="" placeholder="" disabled="" type="password"></div>
+                          </div>
+                          <!--bindings={
+                            "ng-reflect-ng-for-of": ""
+                            }-->
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-12 hidden ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-4">
+                    <div _ngcontent-mud-c32="" id="newPasswordConf" _nghost-mud-c36="" ng-reflect-id="newPasswordConf" ng-reflect-errors="" ng-reflect-is-required="true" ng-reflect-is-disabled="true" ng-reflect-j-text-property="[object Object]" ng-reflect-value="" ng-reflect-name="newPasswordConf" data-id="newPasswordConf" class="ng-untouched ng-pristine ng-valid">
+                      <div _ngcontent-mud-c36="" class="input-password ng-tns-c12-13 not-allowed" _nghost-mud-c12="" ng-reflect-klass="input-password" ng-reflect-ng-class="[object Object]" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="true" ng-reflect-is-enabled="false" ng-reflect-title="新しいパスワード（確認）" ng-reflect-tooltip="" ng-reflect-infos="">
+                        <div _ngcontent-mud-c12="" class="form-group">
+                          <div _ngcontent-mud-c12="" class="form-label">
+                            <label _ngcontent-mud-c12="" class="ng-tns-c12-13">新しいパスワード（確認）</label>
+                            <span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                          </div>
+
+                          <div _ngcontent-mud-c12="" class="content">
+                            <div _ngcontent-mud-c36="" _nghost-mud-c14="" class="disabled" ng-reflect-ng-class="[object Object]" ng-reflect-is-password="true" ng-reflect-value="" ng-reflect-max-length="-1" ng-reflect-placeholder="" ng-reflect-is-disabled="true" ng-reflect-is-read-only="false"><input _ngcontent-mud-c14="" placeholder="" disabled="" type="password"></div>
+                          </div>
+
+                          <p _ngcontent-mud-c12="" class="text-supplementary ng-tns-c12-13 hidden ng-star-inserted"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div _ngcontent-mud-c32="" id="mailOptionSection" _nghost-mud-c22="" ng-reflect-j-text-property="[object Object]">
+              <section _ngcontent-mud-c22="" class="section">
+
+                <h3 _ngcontent-mud-c22="" class="title ng-star-inserted">メール受取り設定</h3>
+
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-17">
+                    <div _ngcontent-mud-c32="" id="maniUnyoMailOption" _nghost-mud-c34="" ng-reflect-id="maniUnyoMailOption" ng-reflect-j-text-property="[object Object]" ng-reflect-screen-id="cg62212" data-id="maniUnyoMailOption" ng-reflect-items-source="[object Object]">
+                      <div _ngcontent-mud-c34="" _nghost-mud-c37="" ng-reflect-is-required="false" ng-reflect-is-disabled="false" ng-reflect-record-count-display-format="0" ng-reflect-record-count-plain-text="" ng-reflect-select-all-button-visibility="false" ng-reflect-height-css-class-list="" data-id="" ng-reflect-title="マニフェストに関するメール" ng-reflect-tooltip="選択したメールは〇が付いている業種宛にメールが配信されます。" ng-reflect-infos="">
+                        <div _ngcontent-mud-c37="" _nghost-mud-c12="" class="ng-tns-c12-14" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="マニフェストに関するメール" ng-reflect-tooltip="選択したメールは〇が付いている業種宛にメールが配信されます。">
+                          <div _ngcontent-mud-c12="" class="form-group">
+                            <div _ngcontent-mud-c12="" class="form-label">
+                              <label _ngcontent-mud-c12="" class="ng-tns-c12-14">マニフェストに関するメール</label><!--bindings={
+                                "ng-reflect-ng-if": "false"
+                                }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle" aria-hidden="true">ヒント</span>
+                            </div>
+
+                            <div _ngcontent-mud-c12="" class="content">
+                              <div _ngcontent-mud-c37="" class="amount">
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全選択
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全解除
+                                  </button>
+                                </div>
+                                <span _ngcontent-mud-c37="" class="hidden"><span _ngcontent-mud-c37="" class=""> 1～7 / </span> 全0件 </span><span _ngcontent-mud-c37="" class="hidden"> 全7件 </span><span _ngcontent-mud-c37="" class="hidden">  </span><span _ngcontent-mud-c37="" class="hidden"> 7件 </span>
+                              </div>
+                              <div _ngcontent-mud-c37="" class="whole-list-s">
+                                <!--bindings={
+                                  "ng-reflect-ng-if": "true"
+                                  }--><!---->
+                                <div _ngcontent-mud-c37="" class="empty-message hidden ng-star-inserted">
+                                  <div _ngcontent-mud-c37="" _nghost-mud-c20="">
+                                    <!--bindings={
+                                      "ng-reflect-ng-if": null
+                                      }-->
+                                  </div>
+                                </div>
+                                <div _ngcontent-mud-c37="" appactivitytracking="" class="spread-area">
+                                  <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                                    <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                                  </wj-flex-grid>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-button hidden" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="false" ng-reflect-control-id="列設定"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="列設定"><span _ngcontent-mud-c37="" class="fa fa-cog"></span>
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-window hidden">
+                                  <div _ngcontent-mud-c37="" class="column-setting-window-close-button fa fa-times"></div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">列の表示・非表示選択</h3>
+                                    <p _ngcontent-mud-c37="" class="note">チェックチェックチェックチェックチェックチェックチェックチェックチェックチェック</p>
+                                    <div _ngcontent-mud-c37="" class="check-box-wrapper">
+                                      <!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }-->
+                                    </div>
+                                  </div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">表示設定</h3>
+                                    <p _ngcontent-mud-c37=""> 列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅。<br _ngcontent-mud-c37=""> 初期状態に戻す場合は「設定解除」ボタンを押してください。 </p>
+                                    <div _ngcontent-mud-c37="" class="btn-wrapper">
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定解除
+                                        </button>
+                                      </div>
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定保存
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div _ngcontent-mud-c37="" _nghost-mud-c40="" ng-reflect-current-page="1" ng-reflect-max-page="0" ng-reflect-is-disabled="false" class="hidden">
+                                <div _ngcontent-mud-c40="" class="pagenation-container" ng-reflect-klass="pagenation-container" ng-reflect-ng-class="[object Object]">
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-backw" ng-reflect-is-disabled="true" ng-reflect-control-id="先頭ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-backward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-b" data-control-id="先頭ページ" disabled="">
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="前ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="前ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-backward disabled" ng-reflect-klass="triangle-icon triangle-backwar" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <span _ngcontent-mud-c40="">1 / 0</span>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="次ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="次ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-forward disabled" ng-reflect-klass="triangle-icon triangle-forward" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-forwa" ng-reflect-is-disabled="true" ng-reflect-control-id="最終ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-forward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-f" data-control-id="最終ページ" disabled="">
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--bindings={}-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-17">
+                    <div _ngcontent-mud-c32="" id="masterMailOption" _nghost-mud-c34="" ng-reflect-id="masterMailOption" ng-reflect-j-text-property="[object Object]" ng-reflect-screen-id="cg62212" data-id="masterMailOption" ng-reflect-items-source="[object Object]">
+                      <div _ngcontent-mud-c34="" _nghost-mud-c37="" ng-reflect-is-required="false" ng-reflect-is-disabled="false" ng-reflect-record-count-display-format="0" ng-reflect-record-count-plain-text="" ng-reflect-select-all-button-visibility="false" ng-reflect-height-css-class-list="" data-id="" ng-reflect-title="マスター登録・変更に関するメール" ng-reflect-tooltip="選択したメールは〇が付いている業種宛にメールが配信されます。" ng-reflect-infos="">
+                        <div _ngcontent-mud-c37="" _nghost-mud-c12="" class="ng-tns-c12-15" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="マスター登録・変更に関するメール" ng-reflect-tooltip="選択したメールは〇が付いている業種宛にメールが配信されます。">
+                          <div _ngcontent-mud-c12="" class="form-group">
+                            <div _ngcontent-mud-c12="" class="form-label">
+                              <label _ngcontent-mud-c12="" class="ng-tns-c12-15">マスター登録・変更に関するメール</label>
+                                <span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle" aria-hidden="true">ヒント</span>
+                            </div>
+                            <div _ngcontent-mud-c12="" class="content">
+                              <div _ngcontent-mud-c37="" class="amount">
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全選択
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全解除
+                                  </button>
+                                </div>
+                                <span _ngcontent-mud-c37="" class="hidden"><span _ngcontent-mud-c37="" class=""> 1～5 / </span> 全0件 </span><span _ngcontent-mud-c37="" class="hidden"> 全5件 </span><span _ngcontent-mud-c37="" class="hidden">  </span><span _ngcontent-mud-c37="" class="hidden"> 5件 </span>
+                              </div>
+                              <div _ngcontent-mud-c37="" class="whole-list-s">
+                                <div _ngcontent-mud-c37="" class="empty-message hidden ng-star-inserted">
+                                  <div _ngcontent-mud-c37="" _nghost-mud-c20="">
+
+                                  </div>
+                                </div>
+                                <div _ngcontent-mud-c37="" appactivitytracking="" class="spread-area">
+                                  <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                                    <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                                    <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                                  </wj-flex-grid>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-button hidden" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="false" ng-reflect-control-id="列設定"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="列設定"><span _ngcontent-mud-c37="" class="fa fa-cog"></span>
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-window hidden">
+                                  <div _ngcontent-mud-c37="" class="column-setting-window-close-button fa fa-times"></div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">列の表示・非表示選択</h3>
+                                    <p _ngcontent-mud-c37="" class="note">チェックチェックチェックチェックチェックチェックチェックチェックチェックチェック</p>
+                                    <div _ngcontent-mud-c37="" class="check-box-wrapper">
+                                    </div>
+                                  </div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">表示設定</h3>
+                                    <p _ngcontent-mud-c37=""> 列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅。<br _ngcontent-mud-c37=""> 初期状態に戻す場合は「設定解除」ボタンを押してください。 </p>
+                                    <div _ngcontent-mud-c37="" class="btn-wrapper">
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定解除
+                                        </button>
+                                      </div>
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定保存
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--bindings={
+                                "ng-reflect-ng-for-of": ""
+                                }-->
+                              <div _ngcontent-mud-c37="" _nghost-mud-c40="" ng-reflect-current-page="1" ng-reflect-max-page="0" ng-reflect-is-disabled="false" class="hidden">
+                                <div _ngcontent-mud-c40="" class="pagenation-container" ng-reflect-klass="pagenation-container" ng-reflect-ng-class="[object Object]">
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-backw" ng-reflect-is-disabled="true" ng-reflect-control-id="先頭ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-backward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-b" data-control-id="先頭ページ" disabled="">
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="前ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="前ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-backward disabled" ng-reflect-klass="triangle-icon triangle-backwar" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <span _ngcontent-mud-c40="">1 / 0</span>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="次ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="次ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-forward disabled" ng-reflect-klass="triangle-icon triangle-forward" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-forwa" ng-reflect-is-disabled="true" ng-reflect-control-id="最終ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-forward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-f" data-control-id="最終ページ" disabled="">
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div _ngcontent-mud-c32="" id="gyomuActSection" _nghost-mud-c22="" ng-reflect-j-text-property="[object Object]">
+              <section _ngcontent-mud-c22="" class="section">
+
+                <h3 _ngcontent-mud-c22="" class="title ng-star-inserted">所属組織</h3>
+
+                <div _ngcontent-mud-c32="" class="row">
+                  <div _ngcontent-mud-c32="" class="col-xs-offset-7 col-xs-17">
+                    <div _ngcontent-mud-c32="" id="gyomuActUserList" _nghost-mud-c34="" ng-reflect-id="gyomuActUserList" ng-reflect-j-text-property="[object Object]" ng-reflect-screen-id="cg62212" ng-reflect-record-count-display-format="2" data-id="gyomuActUserList" ng-reflect-items-source="[object Object]">
+                      <div _ngcontent-mud-c34="" _nghost-mud-c37="" ng-reflect-is-required="false" ng-reflect-is-disabled="false" ng-reflect-record-count-display-format="2" ng-reflect-record-count-plain-text="" ng-reflect-select-all-button-visibility="false" ng-reflect-height-css-class-list="" data-id="" ng-reflect-title="" ng-reflect-tooltip="" ng-reflect-infos="所属組織の追加は［メニュー＞組織管理＞組織管理組織管理組織管理組織管理">
+                        <div _ngcontent-mud-c37="" _nghost-mud-c12="" class="ng-tns-c12-16" ng-reflect-errors="" ng-reflect-warnings="" ng-reflect-is-required="false" ng-reflect-is-enabled="true" ng-reflect-title="" ng-reflect-tooltip="">
+                          <div _ngcontent-mud-c12="" class="form-group">
+                            <div _ngcontent-mud-c12="" class="form-label hidden">
+                              <label _ngcontent-mud-c12="" class="ng-tns-c12-16"></label><!--bindings={
+                                "ng-reflect-ng-if": "false"
+                                }--><span _ngcontent-mud-c12="" class="icon-tooltip fa fa-question-circle hidden" aria-hidden="true">ヒント</span>
+                            </div>
+
+                            <div _ngcontent-mud-c12="" class="content">
+                              <div _ngcontent-mud-c37="" class="amount">
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全選択
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-size="btn-xs" ng-reflect-is-disabled="false" class="hidden"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default btn-xs" ng-reflect-ng-class="btn,btn-default,btn-xs" data-control-id="">全解除
+                                  </button>
+                                </div>
+                                <span _ngcontent-mud-c37="" class="hidden"><span _ngcontent-mud-c37="" class=""> 1～26 / </span> 全0件 </span><span _ngcontent-mud-c37=""> 全26件 </span><span _ngcontent-mud-c37="" class="hidden">  </span><span _ngcontent-mud-c37="" class="hidden"> 26件 </span>
+                              </div>
+                              <div _ngcontent-mud-c37="" class="fixed-height-s">
+                              <!-- <div _ngcontent-mud-c37="" appactivitytracking="" class="spread-area">
+                                <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                                  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
+                                  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
+                                  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+                                  <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
+                                  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
+                                </wj-flex-grid>
+                              </div> -->
+                                <div _ngcontent-mud-c37="" class="column-setting-button hidden" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="false" ng-reflect-control-id="列設定"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="列設定"><span _ngcontent-mud-c37="" class="fa fa-cog"></span>
+                                  </button>
+                                </div>
+                                <div _ngcontent-mud-c37="" class="column-setting-window hidden">
+                                  <div _ngcontent-mud-c37="" class="column-setting-window-close-button fa fa-times"></div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">列の表示・非表示選択</h3>
+                                    <p _ngcontent-mud-c37="" class="note">チェックチェックチェックチェックチェックチェックチェックチェックチェックチェック</p>
+                                    <div _ngcontent-mud-c37="" class="check-box-wrapper">
+                                      <!--bindings={
+                                        "ng-reflect-ng-for-of": ""
+                                        }-->
+                                    </div>
+                                  </div>
+                                  <div _ngcontent-mud-c37="">
+                                    <h3 _ngcontent-mud-c37="">表示設定</h3>
+                                    <p _ngcontent-mud-c37=""> 列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅列の幅。<br _ngcontent-mud-c37=""> 初期状態に戻す場合は「設定解除」ボタンを押してください。 </p>
+                                    <div _ngcontent-mud-c37="" class="btn-wrapper">
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定解除
+                                        </button>
+                                      </div>
+                                      <div _ngcontent-mud-c37="" _nghost-mud-c7="" ng-reflect-style="" ng-reflect-is-disabled="true"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default" ng-reflect-ng-class="btn,btn-default," data-control-id="" disabled="">設定保存
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--bindings={
+                                "ng-reflect-ng-for-of": "所属組織の追加は［メニュー＞組織管理＞組織管理組織管理組織管理組織管理"
+                                }-->
+                              <p _ngcontent-mud-c37="" class="text-supplementary ng-star-inserted">所属組織の追加は［メニュー＞組織管理＞組織管理組織管理組織管理組織管理］から行ってください。</p>
+                              <div _ngcontent-mud-c37="" _nghost-mud-c40="" ng-reflect-current-page="1" ng-reflect-max-page="0" ng-reflect-is-disabled="false" class="hidden">
+                                <div _ngcontent-mud-c40="" class="pagenation-container" ng-reflect-klass="pagenation-container" ng-reflect-ng-class="[object Object]">
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-backw" ng-reflect-is-disabled="true" ng-reflect-control-id="先頭ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-backward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-b" data-control-id="先頭ページ" disabled="">
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="前ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="前ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-backward disabled" ng-reflect-klass="triangle-icon triangle-backwar" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <span _ngcontent-mud-c40="">1 / 0</span>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border" ng-reflect-is-disabled="true" ng-reflect-control-id="次ページ">
+                                    <button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border" ng-reflect-ng-class="btn,btn-no-border," data-control-id="次ページ" disabled="">
+                                      <div _ngcontent-mud-c40="" class="triangle-icon triangle-forward disabled" ng-reflect-klass="triangle-icon triangle-forward" ng-reflect-ng-class="[object Object]"></div>
+                                    </button>
+                                  </div>
+                                  <div _ngcontent-mud-c40="" _nghost-mud-c7="" ng-reflect-style="btn-no-border fa fa-fast-forwa" ng-reflect-is-disabled="true" ng-reflect-control-id="最終ページ"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-no-border fa fa-fast-forward" ng-reflect-ng-class="btn,btn-no-border fa fa-fast-f" data-control-id="最終ページ" disabled="">
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--bindings={}-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div _ngcontent-mud-c21="" class="container-footer-area">
+        <div _ngcontent-mud-c21="" class="container-footer container-footer-bottom">
+          <div _ngcontent-mud-c32="" id="footerButton">
+            <div _ngcontent-mud-c32="" class="align-center">
+              <div _ngcontent-mud-c32="" id="btnReset" _nghost-mud-c7="" ng-reflect-style="btn-default mr-5" ng-reflect-size="btn-md" ng-reflect-j-text-property="[object Object]"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-default mr-5 btn-md" ng-reflect-ng-class="btn,btn-default mr-5,btn-md" data-control-id=""> 元に戻す
+                </button>
+              </div>
+              <div _ngcontent-mud-c32="" id="btnUpdate" _nghost-mud-c7="" ng-reflect-style="btn-primary ml-5" ng-reflect-size="btn-lg" ng-reflect-is-disabled="false" ng-reflect-j-text-property="[object Object]"><button _ngcontent-mud-c7="" appactivitytracking="" type="button" class="btn btn-primary ml-5 btn-lg" ng-reflect-ng-class="btn,btn-primary ml-5,btn-lg" data-control-id=""> 変更を保存
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div class="row">
+                    <div class="col-xs-17 col-xs-offset-7">
+                      <div class="wrap">
+                        <div class="lv2">
+                          <div class="lv3">
+                            <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
+                              <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+                              <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
+                              <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
+                                                    [isReadOnly]="true"
+                                                    [align]="'center'"
+                                                    [width]="100"
+                                                    [allowResizing]="true"
+                                                    [wordWrap]="false"
+                                                    [allowSorting]="false"
+                                                    [header] ="'Country'">
+                              </wj-flex-grid-column>
+                              <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
+                              <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+                                <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
+                                   <app-autocomplete [selectedValue]="cell.item.select"
+                                      [dataSource$]="cell.item.selectData$">
+                                   </app-autocomplete>
+                                </ng-template>
+                              </wj-flex-grid-column>
+                              <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
+                            </wj-flex-grid>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
