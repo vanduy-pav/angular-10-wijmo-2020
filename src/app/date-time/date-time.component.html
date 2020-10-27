@@ -1,0 +1,18 @@
+<wj-input-date-time #wjInput
+    [format]="dateFormat"
+    [timeStep]="timeStep"
+    [timeFormat]="'HH:mm'"
+    [placeholder]="'input date time'"
+    [isRequired]="false"
+    [isDisabled]="false"
+    [isReadOnly]="false"
+    [min]="minValue"
+    [max]="maxValue"
+    (gotFocus)="onGotFocus()"
+    (lostFocus)="onLostFocus()"
+    [(text)]="value"
+    (textChange)="onTextChanged()"
+    (valueChanged)="onValueChange($event)"
+    (invalidInput)="onInvalidInput($event)"
+    >
+</wj-input-date-time>

@@ -11,4 +11,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  onclick() {
+    window.open('./static/view.html', '_blank');
+  }
 }

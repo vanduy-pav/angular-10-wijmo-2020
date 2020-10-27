@@ -1,26 +1,4 @@
-<app-spread [items]="data">
-  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
-                       [isReadOnly]="true"
-                       [align]="'center'"
-                       [width]="100"
-                       [allowResizing]="true"
-                       [wordWrap]="false"
-                       [allowSorting]="false"
-                       [header] ="'Country'">
-  </wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
-    <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
-      <app-autocomplete [selectedValue]="cell.item.select"
-                        [dataSource$]="cell.item.selectData$">
-      </app-autocomplete>
-    </ng-template>
-  </wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
-</app-spread>
-
+<h2>Spread 1 - country (can resize because column 'date' set allowDragging=true) </h2>
 <app-spread [items]="data">
   <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
   <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
@@ -34,32 +12,33 @@
                        [allowSorting]="false"
                        [header] ="'Country'">
   </wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowDragging]="true" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'select'" [allowResizing]="true" [allowDragging]="false">
     <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
       <app-autocomplete [selectedValue]="cell.item.select"
                         [dataSource$]="cell.item.selectData$">
       </app-autocomplete>
     </ng-template>
   </wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="true" [allowDragging]="true"></wj-flex-grid-column>
 </app-spread>
 
-<p>test-spread works!</p>
+<h2>Spread 2 - country (can NOT resize because column 'date' set allowDragging=false) </h2>
 <app-spread [items]="data">
   <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
   <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'country'" [allowDragging]="false"
+  <wj-flex-grid-column [binding]="'country'"
                        [isReadOnly]="true"
                        [align]="'center'"
                        [width]="100"
+                       [allowDragging]="false"
                        [allowResizing]="true"
                        [wordWrap]="false"
                        [allowSorting]="false"
                        [header] ="'Country'">
   </wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false"></wj-flex-grid-column>
-  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false">
+  <wj-flex-grid-column [binding]="'date'" [header]="'Date'" [allowResizing]="false" [allowDragging]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'select'" [allowResizing]="false" [allowDragging]="false">
     <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
       <app-autocomplete [selectedValue]="cell.item.select"
                         [dataSource$]="cell.item.selectData$">
@@ -68,4 +47,3 @@
   </wj-flex-grid-column>
   <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'" [allowResizing]="false"></wj-flex-grid-column>
 </app-spread>
-<hr>

@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, ElementRef, forwardRef, Inject, Injector,
 import { CollectionView } from '@grapecity/wijmo';
 import { WjFlexGrid, wjFlexGridMeta } from '@grapecity/wijmo.angular2.grid';
 import { AllowResizing, AutoSizeMode } from '@grapecity/wijmo.grid';
+import '@grapecity/wijmo.touch';
 
 @Component({
   selector: 'app-spread',

@@ -7,8 +7,7 @@ import { DataSvcService } from 'src/app/data-svc.service';
   styleUrls: ['./test-spread.component.scss']
 })
 export class TestSpreadComponent {
-
-  data;
+  data: any[];
 
   constructor(private dataService: DataSvcService) {
     this.data = dataService.getData(50);

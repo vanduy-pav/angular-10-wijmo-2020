@@ -2,6 +2,12 @@ p {
     font-family: Lato;
   }
 
+ul li {
+  display: inline;
+  padding: 0 6px;
+  border-left: 1px solid;
+}
+
 
   wj-flex-grid {
     height: 100%;

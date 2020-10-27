@@ -26,12 +26,6 @@ export class AutocompleteComponent implements OnInit {
   @Input()
   set selectedValue(value: any) {
     this._selectedValue = value;
-    console.log('set selected value', value);
-    // const selectedItem = this.itemsSource ? this.itemsSource.items.find(it => it.value === value) : undefined;
-
-    // if (selectedItem) {
-    //   this.selectedItem = selectedItem;
-    // }
   }
 
   get selectedValue() {
@@ -48,7 +42,6 @@ export class AutocompleteComponent implements OnInit {
   set dataSource$(value: Observable<IData>) {
     if (value) {
       value.subscribe((v: IData) => {
-        console.log('set selected value from data$', v.selectedValue);
         this.selectedValuePath = v.selectedValuePath;
         this.displayMemberPath = v.displayMemberPath;
         this.itemsSource = new CollectionView(v.itemsSource);
@@ -62,12 +55,8 @@ export class AutocompleteComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log("selected value", this.selectedValue);
-    console.log("selectedItem---------", this.selectedItem);
-
     setTimeout(() => {
       this.autoComplete.selectedValue = this.selectedValue;
-      console.log('refreshed: ', this.selectedValue);
     });
   }
 
