@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import '@grapecity/wijmo.touch';
+import {WjMultiRow} from '@grapecity/wijmo.angular2.grid.multirow';
+import {AllowResizing} from '@grapecity/wijmo.grid';
 import { MultirowResizeService } from './multirow-resize.service';
 
 // https://www.grapecity.com/wijmo/demos/Grid/MultiRow/LayoutDefinition/angular
@@ -13,13 +16,17 @@ export class MultirowResizeComponent implements OnInit {
   layoutDefs: any;
   currentLayout: any;
 
+  @ViewChild(WjMultiRow, {static: true}) multirow: WjMultiRow;
+
   constructor(private dataService: MultirowResizeService) {
-      let appData = dataService.getData();
-      this.orders = appData.orders;
-      this.layoutDefs = appData.layoutDefs;
-      this.currentLayout = appData.layoutDefs.currentItem;
+    let appData = dataService.getData();
+    this.orders = appData.orders;
+    this.layoutDefs = appData.layoutDefs;
+    this.currentLayout = appData.layoutDefs.currentItem;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.multirow.allowResizing = AllowResizing.Both;
+  }
 
 }

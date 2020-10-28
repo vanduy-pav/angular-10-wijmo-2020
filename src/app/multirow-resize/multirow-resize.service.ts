@@ -243,42 +243,42 @@ export class MultirowResizeService {
     ];
     appData.ldThreeLines = [
       {
-        header: 'Order', colspan: 2, cells: [
-          { binding: 'id', header: 'ID', colspan: 2, cssClass: 'id' },
-          { binding: 'amount', header: 'Amount', format: 'c', colspan: 2, cssClass: 'amount' },
-          { binding: 'date', header: 'Ordered' },
-          { binding: 'shippedDate', header: 'Shipped' }
+        header: 'Order', colspan: 3, cells: [
+          { binding: 'id', header: 'ID', colspan: 3, cssClass: 'id', allowResizing: false, allowDragging: false },
+          { binding: 'amount', header: 'Amount', format: 'c', colspan: 3, cssClass: 'amount', allowResizing: false, allowDragging: false },
+          { binding: 'date', header: 'Ordered', allowResizing: false, allowDragging: false },
+          { binding: 'shippedDate', header: 'Shipped', allowResizing: false, allowDragging: false },
+          { binding: 'customer.name', header: 'Name', allowResizing: false, allowDragging: false }
         ]
       },
       {
         header: 'Customer', colspan: 3, cells: [
-          { binding: 'customer.name', header: 'Name' },
-          { binding: 'customer.email', header: 'EMail', colspan: 2, cssClass: 'email' },
-          { binding: 'customer.address', header: 'Address', colspan: 2 },
-          { binding: 'customer.phone', header: 'Phone' },
-          { binding: 'customer.city', header: 'City', dataMap: cityMap },
-          { binding: 'customer.state', header: 'State', width: 45 },
-          { binding: 'customer.zip', header: 'Zip' },
+          { binding: 'customer.email', header: 'EMail', colspan: 2, cssClass: 'email', allowResizing: true, allowDragging: true },
+          { binding: 'customer.address', header: 'Address', colspan: 2, allowResizing: true, allowDragging: true },
+          { binding: 'customer.phone', header: 'Phone', allowResizing: true, allowDragging: true },
+          { binding: 'customer.city', header: 'City', dataMap: cityMap, allowResizing: true, allowDragging: true },
+          { binding: 'customer.state', header: 'State', width: 45, allowResizing: true, allowDragging: true },
+          { binding: 'customer.zip', header: 'Zip', allowResizing: true, allowDragging: true },
         ]
       },
       {
         header: 'Shipper', cells: [
-          { binding: 'shipper.name', header: 'Shipper' },
-          { binding: 'shipper.email', header: 'EMail', cssClass: 'email' },
-          { binding: 'shipper.express', header: 'Express' }
+          { binding: 'shipper.name', header: 'Shipper', allowResizing: false, allowDragging: false },
+          { binding: 'shipper.email', header: 'EMail', cssClass: 'email', allowResizing: false, allowDragging: false },
+          { binding: 'shipper.express', header: 'Express', allowResizing: false, allowDragging: false }
         ]
       }
     ];
     appData.layoutDefs = new CollectionView([
       {
-        name: 'Compact',
-        description: 'This view uses two rows per record. The layout is divided into three groups: order, customer, and shipper',
-        def: appData.ldTwoLines
-      },
-      {
         name: 'Detailed',
         description: 'This view uses three rows per record. The layout is divided into three groups: order, customer, and shipper',
         def: appData.ldThreeLines
+      },
+      {
+        name: 'Compact',
+        description: 'This view uses two rows per record. The layout is divided into three groups: order, customer, and shipper',
+        def: appData.ldTwoLines
       },
       {
         name: 'Traditional',

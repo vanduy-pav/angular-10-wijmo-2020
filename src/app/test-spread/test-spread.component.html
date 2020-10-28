@@ -1,6 +1,6 @@
 <h2>Spread 1 - country (can resize because column 'date' set allowDragging=true) </h2>
 <app-spread [items]="data">
-  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="false"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'" [allowResizing]="true" [allowDragging]="true"></wj-flex-grid-column>
   <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'" [allowResizing]="false"></wj-flex-grid-column>
   <wj-flex-grid-column [binding]="'country'"
                        [isReadOnly]="true"
