@@ -3,6 +3,8 @@ import { DataSvcService, autocompleteData } from "./data-svc.service";
 
 import * as wjcCore from '@grapecity/wijmo';
 import * as wjcGrid from '@grapecity/wijmo.grid';
+import * as wjcGridPdf from '@grapecity/wijmo.grid.pdf';
+import * as wjcPdf from '@grapecity/wijmo.pdf';
 import { BehaviorSubject } from 'rxjs';
 import {IData } from './autocomplete/autocomplete.component';
 
@@ -81,8 +83,8 @@ export class AppComponent implements OnInit  {
 
   private renderRow(panel: wjcGrid.GridPanel, r:number) {
     var tr = '',
-    row = panel.rows[r],
-    nextCol = -1;
+      row = panel.rows[r],
+      nextCol = -1;
     if (row.renderSize > 0) {
       // start row/group row
       tr += row instanceof wjcGrid.GroupRow
@@ -94,7 +96,7 @@ export class AppComponent implements OnInit  {
         var col = panel.columns[c];
         if (col.renderSize > 0 && c >= nextCol) {
           var colSpan = '',
-          mergedRange = null;
+            mergedRange = null;
 
           // get cell content
           var content = panel.getCellData(r, c, true),
@@ -136,6 +138,61 @@ export class AppComponent implements OnInit  {
       tr += '</tr>';
     }
     return tr;
+  }
+
+  // exportGrid(grid) {
+  //   grid.autoSizeColumns();
+  //   grid.autoSizeRows();
+  //   const doc = new wjcPdf.PdfDocument({
+  //     ended: function(s, e) {
+  //       wjcPdf.saveBlob(e.blob, 'FlexGrid.pdf');
+  //     }
+  //   });
+  //   wjcGridPdf.FlexGridPdfConverter.draw(grid, doc);
+  //   doc.end();
+  // }
+
+  exportGrid(grid) {
+    grid.autoSizeColumns();
+    grid.autoSizeRows();
+
+    const pdfDocumentOptions = {
+      pageSettings: {
+        layout: 1, // 横
+        size: 3,
+        margins: {            // ポイント単位 1pt=0.35mm 1mm=2.83pt
+          top: 5 * 2.83,
+          bottom: 5 * 2.83,
+          left: 18 * 2.83,
+          right: 5 * 2.83
+        }
+      }
+    };
+
+    const doc = new wjcPdf.PdfDocument({
+      pageSettings: {
+        layout: 1, // 横
+        size: 3,
+        margins: {            // ポイント単位 1pt=0.35mm 1mm=2.83pt
+          top: 5 * 2.83,
+          bottom: 5 * 2.83,
+          left: 18 * 2.83,
+          right: 5 * 2.83
+        }
+      },
+      ended: function(s, e) {
+        wjcPdf.saveBlob(e.blob, 'FlexGrid.pdf');
+      }
+    });
+    // doc.registerFont({
+    //   source: 'src/app/ipaexg.ttf',
+    //   name: 'ipaexg',
+    //   style: 'normal',
+    //   weight: 'normal',
+    //   sansSerif: true
+    // });
+    wjcGridPdf.FlexGridPdfConverter.draw(grid, doc);
+    doc.end();
   }
 
 }
