@@ -20,18 +20,12 @@
           <wj-flex-grid id="wjGrid" #grid [itemsSource]="data" (initialized)="init(grid)">
             <wj-flex-grid-column [binding]="'id'" [header]="'ID-1'"></wj-flex-grid-column>
             <wj-flex-grid-column [binding]="'id'" [header]="'ID-2'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'country'" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
+            <wj-flex-grid-column [binding]="'country'" [wordWrap]="true" [isContentHtml]="true" [multiLine]="true" [allowDragging]="false" [header] ="'Country'"></wj-flex-grid-column>
             <wj-flex-grid-column [binding]="'date'" [header]="'Date'"></wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'select'">
-              <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell">
-                 <app-autocomplete [selectedValue]="cell.item.select"
-                    [dataSource$]="cell.item.selectData$">
-                 </app-autocomplete>
-              </ng-template>
-            </wj-flex-grid-column>
-            <wj-flex-grid-column [binding]="'sales'" [header]="'Sales'"></wj-flex-grid-column>
           </wj-flex-grid>
         </div>
+        <br><br>
+        <button (click)="exportGrid(grid)">Export</button>
       </div>
     </div>
   </div>
