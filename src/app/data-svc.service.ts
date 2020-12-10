@@ -24,8 +24,15 @@ export class DataSvcService {
       '1899/01/01 - 2019/09/25',
     ];
     // create some random data
-    var countries = 'US,Germany,UK,Japan,Italy,Greece'.split(','),
-        data = [];
+    const testData = '1@こちらなのですが、文字列が長くなったときかつ不特定の文字列でカラムの中身が抜け落ちる現象があるみたいです@\n' +
+      'As public opinion shifts on issues of police violence and racial discrimination\n' +
+      '2@こちらなのですが、文字列が長くなったときかつ不特定の文字列でカラムの中身が抜け落ちる現象があるみたいです@\n' +
+      '3@こちらなのですが、文字列が長くなったときかつ不特定の文字列でカラムの中身が抜け落ちる現象があるみたいです@\n' +
+      '4@こちらなのですが、文字列が長くなったときかつ不特定の文字列でカラムの中身が抜け落ちる現象があるみたいです文字列が長くなったときかつ不特定の文字列でカラムの中身が抜け落ちる現象があるみたいです@';
+
+    const countries = ['US', 'Germany', testData, 'Japan', 'Italy', 'Greece'];
+
+    let data = [];
 
     for (var i = 0; i < count; i++) {
       const selectedValue = this.getRandomInt(1, 3);

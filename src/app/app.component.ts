@@ -180,18 +180,30 @@ export class AppComponent implements OnInit  {
           right: 5 * 2.83
         }
       },
-      ended: function(s, e) {
+      ended: (s, e) => {
         wjcPdf.saveBlob(e.blob, 'FlexGrid.pdf');
       }
     });
-    // doc.registerFont({
-    //   source: 'src/app/ipaexg.ttf',
-    //   name: 'ipaexg',
-    //   style: 'normal',
-    //   weight: 'normal',
-    //   sansSerif: true
-    // });
-    wjcGridPdf.FlexGridPdfConverter.draw(grid, doc);
+
+    doc.registerFont({
+      source: 'assets/ipaexg.ttf',
+      name: 'ipaexg',
+      style: 'normal',
+      weight: 'normal',
+      sansSerif: true
+    });
+
+    wjcGridPdf.FlexGridPdfConverter.draw(grid, doc, doc.width, undefined, {
+      // trueにするとDOMのスタイルを反映させてくれる。が上手く機能しない...
+      // →使用する場合は、SpreadのFontをipaexgにしないと日本語が文字化けする。（spread側のスタイルにフォント指定が必要）
+      // →スプレッドに適用されているスタイルが、表示範囲外のセルに対して適用されない。
+      customCellContent: false,
+      styles: {
+        cellStyle: {
+          font: new wjcPdf.PdfFont('ipaexg')
+        }
+      }
+    });
     doc.end();
   }
 

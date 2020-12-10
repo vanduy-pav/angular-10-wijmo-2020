@@ -6,7 +6,9 @@ p {
   wj-flex-grid {
     height: 100%;
     border: 1px solid black;
-    display: block;
+    //display: block;
+    display: inline-block;
+    max-width: 100%;
   }
   .lv2, .lv3 {
     height: 100%;
